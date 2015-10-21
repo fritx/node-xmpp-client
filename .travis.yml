@@ -16,6 +16,6 @@ before_install:
   - sudo service prosody stop
 
 before_script:
-  - npm install -g grunt-cli
+  - npm install -g grunt-cli mocha
 
 script: npm run full-test
