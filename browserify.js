@@ -1,23 +1,20 @@
 'use strict'
 
+var Connection = require('node-xmpp-core').Connection
 var Client = require('./index')
-var SASL = require('./lib/sasl')
-var core = require('node-xmpp-core')
+var JID = require('node-xmpp-core').JID
+var Element = require('node-xmpp-core').Stanza.Element
+var Stanza = require('node-xmpp-core').Stanza
+var ltx = require('node-xmpp-core').ltx
 
+exports.Connection = Connection
 exports.Client = Client
-exports.SASL = SASL
-
-exports.core = core
-exports.Connection = core.Connection
-exports.Stanza = core.Stanza
-exports.Presence = core.Presence
-exports.IQ = core.IQ
-exports.Message = core.Message
-exports.ltx = core.ltx
-exports.Element = core.Element
-exports.parse = core.parse
-exports.createElement = core.createElement
-exports.createStanza = core.createStanza
-exports.JID = core.JID
+exports.JID = JID
+exports.Element = Element
+exports.Stanza = Stanza.Stanza
+exports.Message = Stanza.Message
+exports.Presence = Stanza.Presence
+exports.Iq = Stanza.Iq
+exports.ltx = ltx
 
 window.XMPP = exports
